@@ -31,6 +31,7 @@ const int displayUpdateInterval = 300000; // 5 minutes update
 
 void setup() {
     Serial.begin(115200);
+    updateDisplay(analogRead(SENSOR_PIN) / 40.95);
     lcd.init();
     lcd.backlight();
 
